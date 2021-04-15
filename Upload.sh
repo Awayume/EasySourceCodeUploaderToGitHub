@@ -39,3 +39,7 @@ echo アップロードを開始します。
 echo アップロード中...
 git push origin master
 echo アップロードが完了しました。
+echo 終了しています...
+cd $home
+rm -rf PackageUpload
+echo 全ての処理が終了しました。
