@@ -28,8 +28,8 @@ cp /storage/emulated/0/AppProjects/$PROJECTNAME/settings.gradle ./
 mkdir app
 cd app
 cp -r /storage/emulated/0/AppProjects/$PROJECTNAME/app/src ./
-cp -r /storage/emulated/0/AppProjects/$PROJECTNAME/app/build.gradle ./
-cp -r /storage/emulated/0/AppProjects/$PROJECTNAME/app/proguard-rules.pro ./
+cp /storage/emulated/0/AppProjects/$PROJECTNAME/app/build.gradle ./
+cp /storage/emulated/0/AppProjects/$PROJECTNAME/app/proguard-rules.pro ./
 cd $home
 cd ~/PackageUpload/$REPOSITORYNAME
 git add ./
