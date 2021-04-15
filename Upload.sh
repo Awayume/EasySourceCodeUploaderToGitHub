@@ -25,5 +25,17 @@ cd $REPOSITORYNAME
 cp /storage/emulated/0/AppProjects/$PROJECTNAME/.gitignore ./
 cp /storage/emulated/0/AppProjects/$PROJECTNAME/build.gradle ./
 cp /storage/emulated/0/AppProjects/$PROJECTNAME/settings.gradle ./
-cp -r /storage/emulated/0/AppProjects/$PROJECTNAME/app ./
-# 以下.dexの削除
+mkdir app
+cd app
+cp -r /storage/emulated/0/AppProjects/$PROJECTNAME/app/src ./
+cp -r /storage/emulated/0/AppProjects/$PROJECTNAME/app/build.gradle ./
+cp -r /storage/emulated/0/AppProjects/$PROJECTNAME/app/proguard-rules.pro ./
+cd $home
+cd ~/PackageUpload/$REPOSITORYNAME
+git add ./
+git commit -m "fromAIDE"
+echo 準備が完了しました。
+echo アップロードを開始します。
+echo アップロード中...
+git push origin master
+echo アップロードが完了しました。
