@@ -37,7 +37,7 @@ git commit -m "fromAIDE"
 echo 準備が完了しました。
 echo アップロードを開始します。
 echo アップロード中...
-git push origin master
+git push origin main
 echo アップロードが完了しました。
 echo 終了しています...
 cd $home
