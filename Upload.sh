@@ -2,12 +2,17 @@
 
 # 開始時のメッセージ
 echo 準備しています...
-# ホームディレクトリへの移動とセットアップ
+# セットアップと作業フォルダの作成、移動
 cd $home
 termux-setup-storage
-# 作業フォルダの作成、移動
-mkdir PackageUpload
-cd PackageUpload
+mkdir EasySourceCodeUploaderToGitHub
+cd EasySourceCodeUploaderToGitHub
+# アップデートチェック
+wget https://drive.google.com/u/1/uc?id=1BcHmNCc-yhRIbH7al_mAW8EsccKbBzuR
+
+
+
+
 # 関数入力
 echo GitHubへのアップロードの準備を開始します。
 echo GitHubのユーザー名を入力してください。
