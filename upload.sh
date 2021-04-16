@@ -7,11 +7,21 @@ cd $home
 termux-setup-storage
 mkdir EasySourceCodeUploaderToGitHub
 cd EasySourceCodeUploaderToGitHub
+mkdir update
+cd update
 # アップデートチェック
-wget https://drive.google.com/u/1/uc?id=1BcHmNCc-yhRIbH7al_mAW8EsccKbBzuR
-
-
-
+wget https://github.com/Awayume/EasySourceCodeUploaderToGitHub/raw/Updater/VersionCodeInfo.txt
+cd $home
+diff ~/EasySourceCodeUploaderToGitHub/date/VersionCodeInfo.txt ~/EasySourceCodeUploaderToGitHub/update/VersionCodeInfo.txt
+if [ $? -eq 1 ]; then
+  echo ================================
+  echo 新バージョンが公開されています。
+  echo アップデートを実行します。
+  echo ================================
+  wget https://github.com/Awayume/EasySourceCodeUploaderToGitHub/raw/Updater/updater.sh
+  chmod 755 ./updater.sh
+  ./updater.sh
+  fi
 
 # 関数入力
 echo GitHubへのアップロードの準備を開始します。
