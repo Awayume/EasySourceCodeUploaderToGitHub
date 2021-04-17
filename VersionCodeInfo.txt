@@ -1,2 +1,2 @@
 Package:EasySourceCodeUploaderToGitHub
-LatestVersionCode:5
+LatestVersionCode:4
