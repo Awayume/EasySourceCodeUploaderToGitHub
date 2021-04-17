@@ -1,8 +1,9 @@
 #!/bin/sh
 
 # 新バージョンの案内
-echo Ver
-echo 
+echo Ver2.1
+echo 一部のコードを修正しました。
+echo.
 # アップデート開始文
 echo アップデートをスタートします。Enterを押してください。
 read Wait
@@ -10,11 +11,9 @@ read Wait
 cd $home
 rm upload.sh
 # 新バージョンのダウンロード
-wget URL
-wget VCURL
+wget https://github.com/Awayume/EasySourceCodeUploaderToGitHub/releases/download/v2.1/upload.sh
 chmod 755 upload.sh
 echo アップデートが完了しました。ツールを起動します。
 echo Enterを押してください。
 read Wait
 ./upload.sh
-
