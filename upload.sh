@@ -7,10 +7,15 @@ cd $home
 termux-setup-storage
 mkdir EasySourceCodeUploaderToGitHub
 cd EasySourceCodeUploaderToGitHub
+mkdir GitHub
 mkdir update
+mkdir date
 cd update
 # アップデートチェック
 wget https://github.com/Awayume/EasySourceCodeUploaderToGitHub/raw/Updater/VersionCodeInfo.txt
+cd $home
+cd ~/EasySourceCodeUploaderToGitHub/date
+wget https://github.com/Awayume/EasySourceCodeUploaderToGitHub/releases/download/v2.0/VersionCodeInfo.txt
 cd $home
 diff ~/EasySourceCodeUploaderToGitHub/date/VersionCodeInfo.txt ~/EasySourceCodeUploaderToGitHub/update/VersionCodeInfo.txt
 if [ $? -eq 1 ]; then
@@ -35,6 +40,7 @@ read PROJECTNAME
 echo アップロードを開始します。
 echo SSHキーにパスワードを設定している場合、途中で入力を求められるので、必ず入力するようにしてください。
 echo アップロードの準備をしています...
+cd ~/EasySourceCodeUploaderToGitHub/GitHub
 git clone git@github.com:$USERNAME/$REPOSITORYNAME.git
 cd $REPOSITORYNAME
 cp /storage/emulated/0/AppProjects/$PROJECTNAME/.gitignore ./
@@ -46,7 +52,7 @@ cp -r /storage/emulated/0/AppProjects/$PROJECTNAME/app/src ./
 cp /storage/emulated/0/AppProjects/$PROJECTNAME/app/build.gradle ./
 cp /storage/emulated/0/AppProjects/$PROJECTNAME/app/proguard-rules.pro ./
 cd $home
-cd ~/PackageUpload/$REPOSITORYNAME
+cd ~/EasySourceCodeUploaderToGitHub/GitHub/$REPOSITORYNAME
 git add ./
 git commit -m "fromAIDE"
 echo 準備が完了しました。
@@ -56,5 +62,5 @@ git push origin main
 echo アップロードが完了しました。
 echo 終了しています...
 cd $home
-rm -rf PackageUpload
+rm -rf EasySourceCodeUploaderToGitHub
 echo 全ての処理が終了しました。
