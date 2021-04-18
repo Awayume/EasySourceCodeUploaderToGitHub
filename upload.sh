@@ -43,14 +43,14 @@ echo アップロードの準備をしています...
 cd ~/EasySourceCodeUploaderToGitHub/GitHub
 git clone git@github.com:$USERNAME/$REPOSITORYNAME.git
 cd $REPOSITORYNAME
-cp /storage/emulated/0/AppProjects/$PROJECTNAME/.gitignore ./
-cp /storage/emulated/0/AppProjects/$PROJECTNAME/build.gradle ./
-cp /storage/emulated/0/AppProjects/$PROJECTNAME/settings.gradle ./
+cp -af /storage/emulated/0/AppProjects/$PROJECTNAME/.gitignore ./
+cp -af /storage/emulated/0/AppProjects/$PROJECTNAME/build.gradle ./
+cp -af /storage/emulated/0/AppProjects/$PROJECTNAME/settings.gradle ./
 mkdir app
 cd app
-cp -r /storage/emulated/0/AppProjects/$PROJECTNAME/app/src ./
-cp /storage/emulated/0/AppProjects/$PROJECTNAME/app/build.gradle ./
-cp /storage/emulated/0/AppProjects/$PROJECTNAME/app/proguard-rules.pro ./
+cp -raf /storage/emulated/0/AppProjects/$PROJECTNAME/app/src ./
+cp -af/storage/emulated/0/AppProjects/$PROJECTNAME/app/build.gradle ./
+cp -af/storage/emulated/0/AppProjects/$PROJECTNAME/app/proguard-rules.pro ./
 cd $home
 cd ~/EasySourceCodeUploaderToGitHub/GitHub/$REPOSITORYNAME
 git add ./
