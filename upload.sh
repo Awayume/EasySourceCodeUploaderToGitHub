@@ -4,6 +4,7 @@
 echo 準備しています...
 # セットアップと作業フォルダの作成、移動
 cd $home
+rm updater.sh
 termux-setup-storage
 mkdir EasySourceCodeUploaderToGitHub
 cd EasySourceCodeUploaderToGitHub
