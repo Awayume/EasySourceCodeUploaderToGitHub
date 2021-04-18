@@ -15,7 +15,7 @@ cd update
 wget https://github.com/Awayume/EasySourceCodeUploaderToGitHub/raw/Updater/VersionCodeInfo.txt
 cd $home
 cd ~/EasySourceCodeUploaderToGitHub/date
-wget https://github.com/Awayume/EasySourceCodeUploaderToGitHub/releases/download/v2.0/VersionCodeInfo.txt
+wget https://github.com/Awayume/EasySourceCodeUploaderToGitHub/releases/download/v2.1/VersionCodeInfo.txt
 cd $home
 diff ~/EasySourceCodeUploaderToGitHub/date/VersionCodeInfo.txt ~/EasySourceCodeUploaderToGitHub/update/VersionCodeInfo.txt
 if [ $? -eq 1 ]; then
