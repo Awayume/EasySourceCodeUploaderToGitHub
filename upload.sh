@@ -4,6 +4,7 @@
 echo 準備しています...
 # セットアップと作業フォルダの作成、移動
 cd $home
+rm updater.sh
 termux-setup-storage
 mkdir EasySourceCodeUploaderToGitHub
 cd EasySourceCodeUploaderToGitHub
@@ -15,7 +16,7 @@ cd update
 wget https://raw.githubusercontent.com/Awayume/EasySourceCodeUploaderToGitHub/Updater/Update.xml
 cd $home
 cd ~/EasySourceCodeUploaderToGitHub/date
-wget https://github.com/Awayume/EasySourceCodeUploaderToGitHub/releases/download/v2.0/VersionInfo.xml
+wget https://github.com/Awayume/EasySourceCodeUploaderToGitHub/blob/main/VersionInfo.xml
 cd $home
 sed -n 3,4p ./EasySourceCodeUploaderToGitHub/Updater/Update.xml >./EasySourceCodeUploaderToGitHub/date/Update.dat
 sed -n 3,4p ./EasySourceCodeUploaderToGitHub/date/VersionInfo.xml >./EasySourceCodeUploaderToGitHub/date/VersionInfo.dat
