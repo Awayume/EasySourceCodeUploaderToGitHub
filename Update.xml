@@ -1,0 +1,11 @@
+ 
+<?xml version="1.0" encoding="utf-8"?>
+<update>
+  <versionCode>6</versionCode>
+  <versionName>2.2</versionName>
+  <url>https://raw.githubusercontent.com/Awayume/EasySourceCodeUploaderToGitHub/Updater/updater.sh</url>
+  <description><![CDATA[
+    アップデート時の挙動を変更しました。
+    使用するコマンドを変更しました。
+  ]]></description>
+</update>
