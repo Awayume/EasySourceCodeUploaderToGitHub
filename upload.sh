@@ -13,12 +13,14 @@ mkdir update
 mkdir date
 cd update
 # アップデートチェック
-wget https://github.com/Awayume/EasySourceCodeUploaderToGitHub/raw/Updater/VersionCodeInfo.txt
+wget https://raw.githubusercontent.com/Awayume/EasySourceCodeUploaderToGitHub/Updater/Update.xml
 cd $home
 cd ~/EasySourceCodeUploaderToGitHub/date
-wget https://github.com/Awayume/EasySourceCodeUploaderToGitHub/releases/download/v2.1/VersionCodeInfo.txt
+wget https://github.com/Awayume/EasySourceCodeUploaderToGitHub/blob/main/VersionInfo.xml
 cd $home
-diff ~/EasySourceCodeUploaderToGitHub/date/VersionCodeInfo.txt ~/EasySourceCodeUploaderToGitHub/update/VersionCodeInfo.txt
+sed -n 3,4p ./EasySourceCodeUploaderToGitHub/Updater/Update.xml >./EasySourceCodeUploaderToGitHub/date/Update.dat
+sed -n 3,4p ./EasySourceCodeUploaderToGitHub/date/VersionInfo.xml >./EasySourceCodeUploaderToGitHub/date/VersionInfo.dat
+diff ~/EasySourceCodeUploaderToGitHub/date/VersionInfo.dat ~/EasySourceCodeUploaderToGitHub/date/Update.dat
 if [ $? -eq 1 ]; then
   echo ================================
   echo 新バージョンが公開されています。
