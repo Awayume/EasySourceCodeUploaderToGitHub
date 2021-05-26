@@ -1,2 +1,0 @@
-Package:EasySourceCodeUploaderToGitHub
-LatestVersionCode:6
